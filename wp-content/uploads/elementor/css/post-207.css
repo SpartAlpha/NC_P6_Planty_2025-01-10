@@ -48,6 +48,9 @@
     justify-content: center;
     overflow: hidden;
 }
+.elementor-207 .elementor-element.elementor-element-f14cdc3 .elementor-field-type-number .elementor-field-label {
+    display: none;
+}
 
 .elementor-207 .elementor-element.elementor-element-f14cdc3 .elementor-field-type-number input {
     max-width: 50px;

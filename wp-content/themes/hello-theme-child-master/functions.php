@@ -48,3 +48,6 @@ function shortcode_bouton_header() {
 }
 
 add_shortcode('bouton_header', 'shortcode_bouton_header');
+
+function remove_auto_sizes_css_fix($add_auto_sizes) {return false;}
+add_filter('wp_img_tag_add_auto_sizes', 'remove_auto_sizes_css_fix');

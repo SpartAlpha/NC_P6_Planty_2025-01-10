@@ -180,9 +180,17 @@ class Admin {
 			add_submenu_page(
 				Settings::PAGE_ID,
 				'',
-				esc_html__( 'Upgrade', 'elementor-pro' ),
+				esc_html__( 'Unlock More Features', 'elementor-pro' ),
 				'manage_options',
-				'elementor_pro_upgrade_license_menu_link'
+				'elementor_pro_upgrade_license_menu_link',
+				function () {
+					wp_redirect( current_user_can( 'manage_options' )
+						? 'https://go.elementor.com/go-pro-advanced-elementor-menu/'
+						: '/wp-admin'
+					);
+
+					die;
+				}
 			);
 		}
 	}
